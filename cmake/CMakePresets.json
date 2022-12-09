@@ -1,0 +1,37 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23
+    },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "Debug;Release"
+            }
+        },
+        {
+            "name": "vs2022",
+            "displayName": "Visual Studio 2022 - x86",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "Win32",
+            "inherits": "base"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "configurePreset": "vs2022",
+            "configuration": "Debug"
+        },
+        {
+            "name": "release",
+            "configurePreset": "vs2022",
+            "configuration": "Release"
+        }
+    ]
+}
