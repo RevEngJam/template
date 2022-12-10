@@ -1,4 +1,5 @@
 #include "proxy/proxy.hpp"
+#include "memory/memory.hpp"
 
 //
 // You will need to figure out what module and functions to export for your application
