@@ -27,5 +27,3 @@ bool proxy::is_loaded(const char* lib)
 {
 	return proxy::libraries.find(lib) != proxy::libraries.end();
 }
-
-EXPORT("ddraw.dll", DirectDrawCreate)
